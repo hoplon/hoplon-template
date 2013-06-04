@@ -4,7 +4,7 @@
   :license      {:name  "Eclipse Public License"
                  :url   "http://www.eclipse.org/legal/epl-v10.html"}
   :plugins      [[tailrecursion/hoplon "0.1.0-SNAPSHOT"]]
-  :dependencies [[tailrecursion/hoplon "0.1.0-SNAPSHOT"]]
+  :dependencies []
   :source-paths ["src/clj"]
   :hoplon       {:html-src      "src/html"
                  :cljs-src      "src/cljs"
