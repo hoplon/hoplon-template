@@ -3,7 +3,7 @@
   <groupId>hoplon</groupId>
   <artifactId>lein-template</artifactId>
   <packaging>jar</packaging>
-  <version>1.1.1</version>
+  <version>1.1.3</version>
   <name>lein-template</name>
   <description>Create new Hoplon projects with style and grace.</description>
   <url>http://github.com/tailrecursion/hoplon-template/</url>
@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/tailrecursion/hoplon-template.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/tailrecursion/hoplon-template.git</developerConnection>
-    <tag>a7c6c79831d99d89343cefd3ba255201fa99898c
+    <tag>dd6fa7b9df7e7dee08562a2c13946978f4ad34c5
 </tag>
     <url>https://github.com/tailrecursion/hoplon-template</url>
   </scm>
