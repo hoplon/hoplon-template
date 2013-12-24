@@ -16,7 +16,7 @@
   <scm>
     <connection>scm:git:git://github.com/tailrecursion/hoplon-template.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/tailrecursion/hoplon-template.git</developerConnection>
-    <tag>a7c6c79831d99d89343cefd3ba255201fa99898c
+    <tag>af538fcd1c593448c62e13f4bba1aec349d709bf
 </tag>
     <url>https://github.com/tailrecursion/hoplon-template</url>
   </scm>
