@@ -1,9 +1,6 @@
 (ns leiningen.new.hoplon
-  (:require
-    [clojure.string           :as string]
-    [clojure.java.io          :as io]
-    [leiningen.new.templates  :as t]
-    [ancient-clj.core         :refer [latest-version-string!]]))
+  (:require [leiningen.new.templates :as t]
+            [ancient-clj.core        :refer [latest-version-string!]]))
 
 (def deps
   '[tailrecursion/boot.core
