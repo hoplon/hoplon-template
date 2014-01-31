@@ -1,6 +1,10 @@
-(page "index.html")
+(page "index.html"
+  (:require [state :as s]))
 
 (html
-  (head)
+  (head
+    (link :rel "stylesheet" :type "text/css" :href "css/main.css"))
   (body
-    (h1 "Hello, World!")))
+    (h1 "Hello, World!")
+    (button :on-click s/clicked!
+      (text "Clicks: ~{s/click-count}"))))

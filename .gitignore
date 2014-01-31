@@ -5,6 +5,7 @@
 *.swn
 *.swo
 *.swp
+pom.xml
 out/
 lib/
 classes/

@@ -1,0 +1,6 @@
+(ns state)
+
+(defc click-count 0)
+
+(defn clicked! []
+  (swap! click-count inc))

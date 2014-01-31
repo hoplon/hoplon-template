@@ -9,7 +9,7 @@
     org.clojure/clojurescript])
 
 (defn latest-deps-strs [deps]
-  (mapv latest-version-string! deps))
+  (mapv (partial latest-version-string! {:snapshots? false}) deps))
 
 (defn hoplon
   "Create new Hoplon project."
@@ -31,5 +31,7 @@
                  :year        (t/year)}]
     (t/->files data
                ["README.md"           (render "README.md"      data)]
-               ["boot.edn"            (render "boot.edn"       data)]
-               ["src/index.cljs.hl"   (render "index.cljs.hl"  data)])))
+               ["build.boot"          (render "build.boot"     data)]
+               ["src/index.cljs.hl"   (render "index.cljs.hl"  data)]
+               ["src/state.cljs.hl"   (render "state.cljs.hl"  data)]
+               ["assets/main.css"     (render "main.css"       data)])))
