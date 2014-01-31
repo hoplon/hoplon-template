@@ -3,7 +3,7 @@
 #tailrecursion.boot.core/version "{{boot-core-v}}"
 
 (set-env!
-  :project      "{{raw-name}}"
+  :project      '{{raw-name}}
   :version      "0.1.0-SNAPSHOT"
   :dependencies '[[tailrecursion/boot.task   "{{boot-task-v}}"]
                   [tailrecursion/hoplon      "{{hoplon-v}}"]
