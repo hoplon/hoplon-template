@@ -15,3 +15,13 @@
 (add-sync! (get-env :out-path) #{"assets"})
 
 (require '[tailrecursion.hoplon.boot :refer :all])
+
+(deftask development
+  "Build {{raw-name}} for development."
+  []
+  (comp (watch) (hoplon {:prerender false :pretty-print true})))
+
+(deftask production
+  "Build {{raw-name}} for production."
+  []
+  (hoplon {:optimizations :advanced}))
