@@ -22,8 +22,7 @@ $ boot watch hoplon
 2. Open the compiled html file.
 
 ```bash
-$ cd resources/public
-$ open index.html
+$ open resources/public/index.html
 ```
 
 3. You're already done.

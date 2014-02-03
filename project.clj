@@ -1,4 +1,4 @@
-(defproject hoplon/lein-template "2.1.0"
+(defproject hoplon/lein-template "2.2.0"
   :description        "Create new Hoplon projects with style and grace."
   :url                "http://github.com/tailrecursion/hoplon-template/"
   :license            {:name  "Eclipse Public License"
