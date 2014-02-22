@@ -23,7 +23,8 @@
                  :boot-core-v boot-core-v
                  :boot-task-v boot-task-v
                  :hoplon-v    hoplon-v
-                 :clojurescript-v clojurescript-v
+                 ;:clojurescript-v clojurescript-v
+                 :clojurescript-v "0.0-2156"
                  :dependencies (latest-deps-strs deps)
                  :require-tasks '#{[tailrecursion.boot.task :refer :all]
                                    [tailrecursion.hoplon.boot :refer :all]}
