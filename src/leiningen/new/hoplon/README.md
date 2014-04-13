@@ -10,20 +10,17 @@ A Hoplon project designed to...well, that part is up to you.
 
 ## Usage
 
-You'll probably want to have two terminals open in your project's
-directory.
+1. Start the auto-compiler. In a terminal:
 
-1. Start the auto-compiler.
+    ```bash
+    $ boot development
+    ```
 
-```bash
-$ boot watch hoplon
-```
+2. Open the compiled html file. It's located at:
 
-2. Open the compiled html file.
-
-```bash
-$ open resources/public/index.html
-```
+    ```
+    resources/public/index.html
+    ```
 
 3. You're already done.
 
