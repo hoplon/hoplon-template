@@ -1,1 +1,2 @@
-.boot
+/.boot/
+/resources/public/
