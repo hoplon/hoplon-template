@@ -5,8 +5,7 @@
 (def deps
   '[tailrecursion/boot.core
     tailrecursion/boot.task
-    tailrecursion/hoplon
-    org.clojure/clojurescript])
+    tailrecursion/hoplon])
 
 (defn latest-deps-strs [deps]
   (mapv (partial latest-version-string! {:snapshots? false}) deps))
@@ -14,17 +13,13 @@
 (defn hoplon
   "Create new Hoplon project."
   [name]
-  (let [[boot-core-v boot-task-v
-         hoplon-v clojurescript-v] (->> deps
-                                        latest-deps-strs)
+  (let [[boot-core-v boot-task-v hoplon-v] (->> deps latest-deps-strs)
         render  (t/renderer "hoplon")
         main-ns (t/multi-segment (t/sanitize-ns name))
         data    {:raw-name    name
                  :boot-core-v boot-core-v
                  :boot-task-v boot-task-v
                  :hoplon-v    hoplon-v
-                 ;:clojurescript-v clojurescript-v
-                 :clojurescript-v "0.0-2202"
                  :dependencies (latest-deps-strs deps)
                  :require-tasks '#{[tailrecursion.boot.task :refer :all]
                                    [tailrecursion.hoplon.boot :refer :all]}
