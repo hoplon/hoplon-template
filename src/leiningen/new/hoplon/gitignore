@@ -1,2 +1,4 @@
-/.boot/
-/resources/public/
+/.boot
+/resources/public
+/.nrepl-port
+/.repl-history
