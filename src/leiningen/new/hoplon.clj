@@ -29,5 +29,5 @@
                ["README.md"           (render "README.md"      data)]
                ["build.boot"          (render "build.boot"     data)]
                ["src/index.cljs.hl"   (render "index.cljs.hl"  data)]
-               ["src/main.inc.css"    (render "main.css"       data)]
+               ["src/main.inc.css"    (render "main.inc.css"   data)]
                [".gitignore"          (render "gitignore"      data)])))
