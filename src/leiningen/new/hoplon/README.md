@@ -16,11 +16,7 @@ A Hoplon project designed to...well, that part is up to you.
     $ boot development
     ```
 
-2. Open the compiled html file. It's located at:
-
-    ```
-    resources/public/index.html
-    ```
+2. Go to [http://localhost:8000][3] in your browser. You should see "Hello, World!".
 
 3. You're already done.
 
@@ -30,3 +26,4 @@ Copyright © {{year}}, **Your Name Goes Here**
 
 [1]: https://github.com/tailrecursion/boot
 [2]: https://github.com/technomancy/leiningen
+[3]: http://localhost:8000
