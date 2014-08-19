@@ -1,7 +1,10 @@
-(page "index.html")
+(page "index.html"
+  (:require
+    [tailrecursion.hoplon.reload :refer [reload-all]]))
+
+(reload-all 1000)
 
 (html
-  (head
-    (link :rel "stylesheet" :type "text/css" :href "css/main.css"))
+  (head)
   (body
     (h1 "Hello, World!")))
