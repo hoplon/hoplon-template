@@ -13,12 +13,21 @@
 ;; Static resources (css, images, etc.):
 (add-sync! (get-env :out-path) #{"assets"})
 
-(require '[tailrecursion.hoplon.boot :refer :all])
+(require
+  '[tailrecursion.hoplon.boot    :refer :all]
+  '[tailrecursion.boot.task.ring :refer [dev-server]])
 
 (deftask development
   "Build {{raw-name}} for development."
   []
-  (comp (watch) (hoplon {:prerender false :pretty-print true})))
+  (comp (watch) (hoplon {:pretty-print true :prerender false}) (dev-server)))
+
+(deftask dev-debug
+  "Build {{raw-name}} for development with source maps."
+  []
+  (comp (watch) (hoplon {:pretty-print true
+                         :prerender false
+                         :source-map true}) (dev-server)))
 
 (deftask production
   "Build {{raw-name}} for production."
