@@ -43,5 +43,5 @@
                ["build.boot"        (render "build.boot"      data)]
                ["boot.properties"   (render "boot.properties" data)]
                ["src/index.cljs.hl" (render "index.cljs.hl"   data)]
-               ["src/main.inc.css"  (render "main.inc.css"    data)]
+               ["assets/app.css"    (render "app.css"         data)]
                [".gitignore"        (render "gitignore"       data)])))

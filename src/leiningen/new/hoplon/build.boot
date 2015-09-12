@@ -6,7 +6,8 @@
                   [hoplon/boot-hoplon        "{{boot-hoplon-v}}"]
                   [hoplon/hoplon             "{{hoplon-v}}"]
                   [tailrecursion/boot-jetty  "{{boot-jetty-v}}"]]
-  :source-paths #{"src"})
+  :source-paths #{"src"}
+  :asset-paths  #{"assets"})
 
 (require
   '[adzerk.boot-cljs         :refer [cljs]]

@@ -1,4 +1,4 @@
 /.boot
-/resources/public
+/target
 /.nrepl-port
 /.repl-history
