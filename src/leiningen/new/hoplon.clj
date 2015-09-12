@@ -19,7 +19,7 @@
         data    {:raw-name    name
                  :boot-core-v boot-core-v
                  :boot-task-v boot-task-v
-                 :hoplon-v    hoplon-v
+                 :hoplon-v    "5.10.25"
                  :dependencies (latest-deps-strs deps)
                  :require-tasks '#{[tailrecursion.boot.task :refer :all]
                                    [tailrecursion.hoplon.boot :refer :all]}
