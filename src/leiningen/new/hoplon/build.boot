@@ -1,35 +1,34 @@
-#!/usr/bin/env boot
-
-#tailrecursion.boot.core/version "{{boot-core-v}}"
-
 (set-env!
-  :project      '{{raw-name}}
-  :version      "0.1.0-SNAPSHOT"
-  :dependencies '[[tailrecursion/boot.task   "{{boot-task-v}}"]
-                  [tailrecursion/hoplon      "{{hoplon-v}}"]]
-  :out-path     "resources/public"
-  :src-paths    #{"src"})
-
-;; Static resources (css, images, etc.):
-(add-sync! (get-env :out-path) #{"assets"})
+  :dependencies '[[adzerk/boot-cljs          "{{boot-cljs-v}}"]
+                  [adzerk/boot-reload        "{{boot-reload-v}}"]
+                  [org.clojure/clojurescript "{{clojurescript-v}}"]
+                  [org.clojure/clojure       "{{clojure-v}}"]
+                  [hoplon/boot-hoplon        "{{boot-hoplon-v}}"]
+                  [hoplon/hoplon             "{{hoplon-v}}"]
+                  [tailrecursion/boot-jetty  "{{boot-jetty-v}}"]]
+  :source-paths #{"src"})
 
 (require
-  '[tailrecursion.hoplon.boot    :refer :all]
-  '[tailrecursion.boot.task.ring :refer [dev-server]])
+  '[adzerk.boot-cljs         :refer [cljs]]
+  '[adzerk.boot-reload       :refer [reload]]
+  '[hoplon.boot-hoplon       :refer [hoplon prerender]]
+  '[tailrecursion.boot-jetty :refer [serve]])
 
-(deftask development
-  "Build {{raw-name}} for development."
+(deftask dev
+  "Build {{raw-name}} for local development."
   []
-  (comp (watch) (hoplon {:pretty-print true :prerender false}) (dev-server)))
+  (comp
+    (watch)
+    (speak)
+    (hoplon)
+    (reload)
+    (cljs)
+    (serve :port 8000)))
 
-(deftask dev-debug
-  "Build {{raw-name}} for development with source maps."
+(deftask prod
+  "Build {{raw-name}} for production deployment."
   []
-  (comp (watch) (hoplon {:pretty-print true
-                         :prerender false
-                         :source-map true}) (dev-server)))
-
-(deftask production
-  "Build {{raw-name}} for production."
-  []
-  (hoplon {:optimizations :advanced}))
+  (comp
+    (hoplon)
+    (cljs :optimizations :advanced)
+    (prerender)))

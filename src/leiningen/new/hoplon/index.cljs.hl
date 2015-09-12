@@ -1,10 +1,6 @@
-(page "index.html"
-  (:require
-    [tailrecursion.hoplon.reload :refer [reload-all]]))
-
-(reload-all 1000)
+(page "index.html")
 
 (html
   (head)
   (body
-    (h1 "Hello, World!")))
+    (h1 "Hello, Hoplon!")))
