@@ -1,10 +1,10 @@
 (set-env!
   :dependencies '[[adzerk/boot-cljs          "{{boot-cljs-v}}"]
                   [adzerk/boot-reload        "{{boot-reload-v}}"]
-                  [org.clojure/clojurescript "{{clojurescript-v}}"]
-                  [org.clojure/clojure       "{{clojure-v}}"]
                   [hoplon/boot-hoplon        "{{boot-hoplon-v}}"]
                   [hoplon/hoplon             "{{hoplon-v}}"]
+                  [org.clojure/clojure       "{{clojure-v}}"]
+                  [org.clojure/clojurescript "{{clojurescript-v}}"]
                   [tailrecursion/boot-jetty  "{{boot-jetty-v}}"]]
   :source-paths #{"src"}
   :asset-paths  #{"assets"})

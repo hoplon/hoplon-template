@@ -1,6 +1,6 @@
 # {{name}}
 
-A Hoplon project designed to...well, that part is up to you.
+A [Hoplon][4] project designed to...well, that part is up to you.
 
 ## Dependencies
 
@@ -27,3 +27,4 @@ Copyright © {{year}}, **Your Name Goes Here**
 [1]: http://boot-clj.com
 [2]: https://github.com/technomancy/leiningen
 [3]: http://localhost:8000
+[4]: http://hoplon.io
