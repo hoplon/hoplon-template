@@ -5,6 +5,7 @@
 (def deps
   '[boot/core
     adzerk/boot-cljs
+    adzerk/boot-cljs-repl
     adzerk/boot-reload
     org.clojure/clojurescript
     hoplon/boot-hoplon
@@ -19,6 +20,7 @@
   [name]
   (let [[boot-core-v
          boot-cljs-v
+         boot-cljs-repl-v
          boot-reload-v
          clojurescript-v
          boot-hoplon-v
@@ -27,17 +29,18 @@
         clojure-v "1.7.0"
         render  (t/renderer "hoplon")
         main-ns (t/multi-segment (t/sanitize-ns name))
-        data    {:raw-name        name
-                 :boot-core-v     boot-core-v
-                 :hoplon-v        hoplon-v
-                 :boot-cljs-v     boot-cljs-v
-                 :boot-reload-v   boot-reload-v
-                 :clojure-v       clojure-v
-                 :clojurescript-v clojurescript-v
-                 :boot-hoplon-v   boot-hoplon-v
-                 :boot-jetty-v    boot-jetty-v
-                 :name            (t/project-name name)
-                 :year            (t/year)}]
+        data    {:raw-name         name
+                 :boot-cljs-v      boot-cljs-v
+                 :boot-cljs-repl-v boot-cljs-repl-v
+                 :boot-core-v      boot-core-v
+                 :boot-hoplon-v    boot-hoplon-v
+                 :boot-jetty-v     boot-jetty-v
+                 :boot-reload-v    boot-reload-v
+                 :clojure-v        clojure-v
+                 :clojurescript-v  clojurescript-v
+                 :hoplon-v         hoplon-v
+                 :name             (t/project-name name)
+                 :year             (t/year)}]
     (t/->files data
                ["README.md"         (render "README.md"       data)]
                ["build.boot"        (render "build.boot"      data)]
