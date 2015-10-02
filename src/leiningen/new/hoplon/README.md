@@ -21,18 +21,7 @@ A [Hoplon][3] project designed to...well, that part is up to you.
 
 2. Go to [http://localhost:8000][2] in your browser. You should see "Hello, Hoplon!".
 
-3. To use the Clojurescript REPL on another terminal run:
-    ```bash
-    $ boot repl -c
-    ```
-    ```clj
-    boot.user=> (start-repl)
-    ...
-    cljs.user=> (.alert js/window "From the Clojurescript REPL")
-    ```
-    You should see a popup on the browser.
-
-4. If you edit and save a file, the task will recompile the code and reload the
+3. If you edit and save a file, the task will recompile the code and reload the
    browser to show the updated version.
 
 ### Production

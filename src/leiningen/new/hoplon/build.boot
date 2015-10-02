@@ -1,6 +1,5 @@
 (set-env!
   :dependencies '[[adzerk/boot-cljs          "{{boot-cljs-v}}"]
-                  [adzerk/boot-cljs-repl     "{{boot-cljs-repl-v}}"]
                   [adzerk/boot-reload        "{{boot-reload-v}}"]
                   [hoplon/boot-hoplon        "{{boot-hoplon-v}}"]
                   [hoplon/hoplon             "{{hoplon-v}}"]
@@ -12,7 +11,6 @@
 
 (require
   '[adzerk.boot-cljs         :refer [cljs]]
-  '[adzerk.boot-cljs-repl    :refer [cljs-repl start-repl]]
   '[adzerk.boot-reload       :refer [reload]]
   '[hoplon.boot-hoplon       :refer [hoplon prerender]]
   '[tailrecursion.boot-jetty :refer [serve]])
@@ -25,7 +23,6 @@
     (speak)
     (hoplon)
     (reload)
-    (cljs-repl)
     (cljs)
     (serve :port 8000)))
 
