@@ -2,6 +2,11 @@
 
 A Leiningen template for creating new Hoplon projects.
 
+## Prerequisites
+
+* Java 8 (not 7)
+* Leiningen
+
 ## Usage
 
 ```bash
