@@ -12,6 +12,12 @@ A Leiningen template for creating new Hoplon projects.
 ```bash
 $ lein new hoplon my-project-name
 ```
+## Deployment
+Just do:
+```bash
+$ boot prod
+```
+and copy static files found in your project `/target` directory.
 
 ## License
 
