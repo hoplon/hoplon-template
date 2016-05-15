@@ -32,4 +32,4 @@
   (comp
     (hoplon)
     (cljs :optimizations :advanced)
-    (prerender)))
+    (target :dir #{"target"})))
