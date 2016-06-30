@@ -5,12 +5,12 @@ A Leiningen template for creating new Hoplon projects.
 ## Prerequisites
 
 * Java 8 (not 7)
-* Leiningen
+* [Boot](http://boot-clj.com)
 
 ## Usage
 
 ```bash
-$ lein new hoplon my-project-name
+$ boot -d seancorfield/boot-new new -t hoplon -n my-project-name
 ```
 ## Deployment
 Just do:
@@ -21,6 +21,6 @@ and copy static files found in your project `/target` directory.
 
 ## License
 
-Copyright © 2013 Micha Niskin
+Copyright © 2013 Micha Niskin and Contributors
 
 Distributed under the Eclipse Public License, the same as Clojure.

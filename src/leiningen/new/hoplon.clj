@@ -9,7 +9,8 @@
     org.clojure/clojurescript
     hoplon/boot-hoplon
     hoplon/hoplon
-    tailrecursion/boot-jetty])
+    tailrecursion/boot-jetty
+    org.clojure/clojure])
 
 (defn latest-deps-strs [deps]
   (mapv #(latest-version-string! % {:snapshots? false}) deps))
@@ -23,8 +24,8 @@
          clojurescript-v
          boot-hoplon-v
          hoplon-v
-         boot-jetty-v] (latest-deps-strs deps)
-        clojure-v "1.7.0"
+         boot-jetty-v
+         clojure-v] (latest-deps-strs deps)
         render  (t/renderer "hoplon")
         main-ns (t/multi-segment (t/sanitize-ns name))
         data    {:raw-name         name
