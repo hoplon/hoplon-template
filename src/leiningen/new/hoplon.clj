@@ -6,7 +6,7 @@
   "Create new Hoplon project."
   [name]
   (let [boot-cljs-v "1.7.228-2"
-        boot-core-v "2.6.0"
+        boot-core-v "2.7.1"
         boot-jetty-v "0.1.3"
         boot-reload-v "0.4.13"
         clojure-v "1.8.0"
