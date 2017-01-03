@@ -1,36 +1,21 @@
 (ns leiningen.new.hoplon
-  (:require [leiningen.new.templates :as t]
-            [ancient-clj.core        :refer [latest-version-string!]]))
-
-(def deps
-  '[boot/core
-    adzerk/boot-cljs
-    adzerk/boot-reload
-    org.clojure/clojurescript
-    hoplon/boot-hoplon
-    hoplon/hoplon
-    tailrecursion/boot-jetty])
-
-(defn latest-deps-strs [deps]
-  (mapv #(latest-version-string! % {:snapshots? false}) deps))
+  (:require
+    [leiningen.new.templates :as t]))
 
 (defn hoplon
   "Create new Hoplon project."
   [name]
-  (let [[boot-core-v
-         boot-cljs-v
-         boot-reload-v
-         clojurescript-v
-         boot-hoplon-v
-         hoplon-v
-         boot-jetty-v] (latest-deps-strs deps)
+  (let [boot-cljs-v "1.7.228-2"
+        boot-core-v "2.7.1"
+        boot-jetty-v "0.1.3"
+        boot-reload-v "0.4.13"
         clojure-v "1.8.0"
+        clojurescript-v "1.9.293"
+        hoplon-v "6.0.0-alpha17"
         render  (t/renderer "hoplon")
-        main-ns (t/multi-segment (t/sanitize-ns name))
         data    {:raw-name         name
                  :boot-cljs-v      boot-cljs-v
                  :boot-core-v      boot-core-v
-                 :boot-hoplon-v    boot-hoplon-v
                  :boot-jetty-v     boot-jetty-v
                  :boot-reload-v    boot-reload-v
                  :clojure-v        clojure-v
