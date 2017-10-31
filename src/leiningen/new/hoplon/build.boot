@@ -4,9 +4,14 @@
                   [hoplon/hoplon             "{{hoplon-v}}"]
                   [org.clojure/clojure       "{{clojure-v}}"]
                   [org.clojure/clojurescript "{{clojurescript-v}}"]
-                  [tailrecursion/boot-jetty  "{{boot-jetty-v}}"]]
+                  [tailrecursion/boot-jetty  "{{boot-jetty-v}}"]
+                  [onetom/boot-lein-generate "{{boot-lein-generate-v}}" :scope "test"]]
   :source-paths #{"src"}
   :asset-paths  #{"assets"})
+
+;; generate project.clj for cursive ide
+(require '[boot.lein])
+(boot.lein/generate)
 
 (require
   '[adzerk.boot-cljs         :refer [cljs]]
