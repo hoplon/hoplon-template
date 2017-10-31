@@ -12,7 +12,7 @@
 
 (require '[adzerk.bootlaces :refer :all])
 
-(def +version+ "3.2.6")
+(def +version+ "7.0.3")
 
 (bootlaces! +version+)
 
@@ -20,7 +20,7 @@
  pom  {:project     'hoplon/lein-template
        :version     +version+
        :description "Create new Hoplon projects with style and grace."
-       :url         "https://github.com/tailrecursion/hoplon-template"
-       :scm         {:url "https://github.com/tailrecursion/hoplon-template"}
+       :url         "https://github.com/hoplon/hoplon-template"
+       :scm         {:url "https://github.com/hoplon/hoplon-template"}
        :license     {"Eclipse Public License"
                      "http://www.eclipse.org/legal/epl-v10.html"}})
